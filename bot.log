@@ -1,0 +1,11 @@
+
+> discord-getting-started@1.0.0 start
+> node app.js
+
+✓ Bot logged in as Encryptobot#5751
+(node:30601) DeprecationWarning: The ready event has been renamed to clientReady to distinguish it from the gateway READY event and will only emit under that name in v15. Please use clientReady instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Database initialized
+✓ Database initialized
+Starting deletion service...
+✓ Deletion service started
