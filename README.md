@@ -6,7 +6,7 @@ Protecting Discord users in the digital age.
 
 A proactive Discord bot that prevents accidental leaks of sensitive information — before damage is done.
 
-Built for **QWIC Hackathon**, Encryptobot focuses on **online safety for users 13+**, empowering communities to communicate securely without sacrificing ease of use.
+Built for the **QWIC Hackathon**, Encryptobot focuses on **online safety for users 13+**, empowering communities to communicate securely without sacrificing ease of use.
 
 ---
 
