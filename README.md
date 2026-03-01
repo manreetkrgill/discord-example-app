@@ -2,7 +2,7 @@
 
 # 🔐 Encryptobot 
 
-##Protecting Discord users in the digital age
+Protecting Discord users in the digital age.
 
 A proactive Discord bot that prevents accidental leaks of sensitive information — before damage is done.
 
