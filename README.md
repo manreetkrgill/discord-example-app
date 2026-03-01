@@ -1,108 +1,102 @@
-# Getting Started app for Discord
+---
 
-This project contains a basic rock-paper-scissors-style Discord app written in JavaScript, built for the [getting started guide](https://discord.com/developers/docs/getting-started).
+# 🔐 Encryptobot 
 
-![Demo of app](https://github.com/discord/discord-example-app/raw/main/assets/getting-started-demo.gif?raw=true)
+##Protecting Discord users in the digital age
 
-## Project structure
-Below is a basic overview of the project structure:
+A proactive Discord bot that prevents accidental leaks of sensitive information — before damage is done.
 
-```
-├── examples    -> short, feature-specific sample apps
-│   ├── app.js  -> finished app.js code
-│   ├── button.js
-│   ├── command.js
-│   ├── modal.js
-│   ├── selectMenu.js
-├── .env.sample -> sample .env file
-├── app.js      -> main entrypoint for app
-├── commands.js -> slash command payloads + helpers
-├── game.js     -> logic specific to RPS
-├── utils.js    -> utility functions and enums
-├── package.json
-├── README.md
-└── .gitignore
-```
+Built for **QWIC Hackathon**, Encryptobot focuses on **online safety for users 13+**, empowering communities to communicate securely without sacrificing ease of use.
 
-## Running app locally
+---
 
-Before you start, you'll need to install [NodeJS](https://nodejs.org/en/download/) and [create a Discord app](https://discord.com/developers/applications) with the proper permissions:
-- `applications.commands`
-- `bot` (with Send Messages enabled)
+## 🚀 Elevator Pitch
 
+**Encryptobot** is a Discord bot designed to protect users from accidentally sharing sensitive information online. It detects potential API keys, passwords, credit card numbers, and private tokens *in real time* and warns users before the message is exposed.
 
-Configuring the app is covered in detail in the [getting started guide](https://discord.com/developers/docs/getting-started).
+When sensitive information *is* shared intentionally, Encryptobot converts it into a **secure, temporary locked message**, accessible only after personal verification and automatically deleted after a set time.
 
-### Setup project
+Instead of reacting to data leaks, Encryptobot **prevents them at the source**.
 
-First clone the project:
-```
-git clone https://github.com/discord/discord-example-app.git
-```
+---
 
-Then navigate to its directory and install dependencies:
-```
-cd discord-example-app
-npm install
-```
-### Get app credentials
+## 🌍 Why This Matters
 
-Fetch the credentials from your app's settings and add them to a `.env` file (see `.env.sample` for an example). You'll need your app ID (`APP_ID`), bot token (`DISCORD_TOKEN`), and public key (`PUBLIC_KEY`).
+In today’s digital world, sensitive data leaks happen every day — often by accident.
 
-Fetching credentials is covered in detail in the [getting started guide](https://discord.com/developers/docs/getting-started).
+Developers, students, and online communities frequently share:
 
-> 🔑 Environment variables can be added to the `.env` file in Glitch or when developing locally, and in the Secrets tab in Replit (the lock icon on the left).
+* API keys in public channels
+* Passwords without realizing visibility
+* Personal or financial information
 
-### Install slash commands
+These mistakes can lead to:
 
-The commands for the example app are set up in `commands.js`. All of the commands in the `ALL_COMMANDS` array at the bottom of `commands.js` will be installed when you run the `register` command configured in `package.json`:
+* 💸 Financial loss
+* 🔓 Account compromise
+* 🪪 Identity theft
 
-```
-npm run register
-```
+**Encryptobot was built on a simple belief:**
 
-### Run the app
+> Digital safety shouldn’t rely solely on user vigilance — technology should actively help protect users.
 
-After your credentials are added, go ahead and run the app:
+---
 
-```
-node app.js
-```
+## 🛡️ What Encryptobot Does
 
-> ⚙️ A package [like `nodemon`](https://github.com/remy/nodemon), which watches for local changes and restarts your app, may be helpful while locally developing.
+### 1️⃣ Real-Time Sensitive Data Detection
 
-If you aren't following the [getting started guide](https://discord.com/developers/docs/getting-started), you can move the contents of `examples/app.js` (the finished `app.js` file) to the top-level `app.js`.
+Encryptobot continuously monitors messages for patterns associated with sensitive data, including:
 
-### Set up interactivity
+* API keys (AWS, GitHub, Stripe, bearer tokens)
+* Password disclosures (e.g., “password is…”, “pass:”)
+* Credit card numbers
+* Email addresses
+* Personal identification numbers (PINs)
 
-The project needs a public endpoint where Discord can send requests. To develop and test locally, you can use something like [`ngrok`](https://ngrok.com/) to tunnel HTTP traffic.
+If a risky message is detected, Encryptobot immediately warns the user:
 
-Install ngrok if you haven't already, then start listening on port `3000`:
+> *“It looks like you're about to send some sensitive information. Click to protect it!”*
 
-```
-ngrok http 3000
-```
+The user can then:
 
-You should see your connection open:
+* ❌ **Cancel** — message is deleted instantly
+* 🔒 **Send Securely** — information is protected
 
-```
-Tunnel Status                 online
-Version                       2.0/2.0
-Web Interface                 http://127.0.0.1:4040
-Forwarding                    https://1234-someurl.ngrok.io -> localhost:3000
+---
 
-Connections                  ttl     opn     rt1     rt5     p50     p90
-                              0       0       0.00    0.00    0.00    0.00
-```
+### 2️⃣ Secure & Controlled Sharing
 
-Copy the forwarding address that starts with `https`, in this case `https://1234-someurl.ngrok.io`, then go to your [app's settings](https://discord.com/developers/applications).
+When users choose to send sensitive information intentionally, Encryptobot:
 
-On the **General Information** tab, there will be an **Interactions Endpoint URL**. Paste your ngrok address there, and append `/interactions` to it (`https://1234-someurl.ngrok.io/interactions` in the example).
+* Hides the content behind a **locked message**
+* Requires a **personal verification question** to access it
+* Automatically **deletes the message after a set time**
 
-Click **Save Changes**, and your app should be ready to run 🚀
+This ensures:
 
-## Other resources
-- Read **[the documentation](https://discord.com/developers/docs/intro)** for in-depth information about API features.
-- Browse the `examples/` folder in this project for smaller, feature-specific code examples
-- Join the **[Discord Developers server](https://discord.gg/discord-developers)** to ask questions about the API, attend events hosted by the Discord API team, and interact with other devs.
-- Check out **[community resources](https://discord.com/developers/docs/topics/community-resources#community-resources)** for language-specific tools maintained by community members.
+* Only intended recipients can view the data
+* Sensitive info never lives permanently in chat history
+
+---
+
+## 🎯 Who It’s For
+
+* Discord communities (13+)
+* Students & study servers
+* Developers & hackathon teams
+* Clubs, organizations, and collaborative spaces
+* Anyone who values **privacy, safety, and control**
+
+---
+
+## 🧠 Key Design Principles
+
+* **Proactive, not reactive** security
+* **User autonomy** — warn, don’t block
+* **Minimal friction** — safety without disruption
+* **Privacy-first** mindset
+
+---
+
+ **Prevent leaks before they become breaches.**
