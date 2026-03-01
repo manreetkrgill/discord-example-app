@@ -71,7 +71,7 @@ client.on('messageCreate', async (message) => {
     );
 
     await message.reply({
-      content: 'Your message contains sensitive info. Click to protect it.',
+      content: "It looks like you're about to send some sensitive information. Click to protect it!",
       components: [button],
     });
     console.log('[MSG] Button sent');
